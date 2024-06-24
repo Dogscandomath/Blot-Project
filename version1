@@ -1,0 +1,91 @@
+const width = 125;
+const height = 125;
+
+setDocDimensions(width, height);
+
+// store final lines here
+const finalLines = [];
+
+
+
+// create a polyline
+const polyline = [
+  [20, 20],
+  [10, 20],
+  [10, 37.5],
+  [60, 37.5],
+  [61, 55],
+  [80, 55],
+  [90, 40],
+  [120, 35],
+  [120, 20],
+  [115, 20]
+];
+
+const t = new bt.Turtle()
+  t.jump([30, 11])
+  t.arc( 360 , 8)
+drawLines(t.lines())
+
+const t2 = new bt.Turtle()
+  t2.jump([105, 11])
+  t2.arc (360, 8)
+drawLines(t2.lines())
+
+const t3 = new bt.Turtle()
+  t3.jump([105, 29])
+  t3.arc (-80, 11)
+drawLines(t3.lines())
+
+const t4 = new bt.Turtle()
+  t4.jump([105, 29])
+  t4.arc (80, -11)
+drawLines(t4.lines())
+
+const t5 = new bt.Turtle()
+  t5.jump([30, 29])
+  t5.arc (-80, 11)
+drawLines(t5.lines())
+
+const t6 = new bt.Turtle()
+  t6.jump([30, 29])
+  t6.arc (80, -11)
+drawLines(t6.lines())
+
+const door = [
+  [80, 53],
+  [63,53],
+  [63, 21],
+  [88, 21],
+  [88, 40],
+  [80, 53] 
+];
+
+const window = [
+  [79, 52],
+  [64, 52],
+  [64, 41],
+  [85.5, 41],
+  [79, 52]
+
+];
+
+const handle = [
+  [66, 36],
+  [70, 36],
+  [70, 35],
+  [66, 35],
+  [66, 36]
+];
+
+finalLines.push(polyline);
+finalLines.push(door);
+finalLines.push(window);
+finalLines.push(handle);
+
+drawLines(finalLines)
+
+const ts = new bt.Turtle()
+  ts.jump([40, 20])
+  ts.forward( 55)
+drawLines(ts.lines())
