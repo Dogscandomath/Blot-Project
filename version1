@@ -52,6 +52,51 @@ const t6 = new bt.Turtle()
   t6.arc (80, -11)
 drawLines(t6.lines())
 
+const t7 = new bt.Turtle()
+  t7.jump([30, 31])
+  t7.arc (80, -13)
+drawLines(t7.lines())
+
+const t8 = new bt.Turtle()
+  t8.jump([30, 31])
+  t8.arc (-80, 13)
+drawLines(t8.lines())
+
+const t9 = new bt.Turtle()
+  t9.jump([105, 31])
+  t9.arc (-80, 13)
+drawLines(t9.lines())
+
+const t10 = new bt.Turtle()
+  t10.jump([105, 31])
+  t10.arc (80, -13)
+drawLines(t10.lines())
+
+const ra = bt.randInRange (57, 70)
+const rr = bt.randInRange(10, 25)
+const rb = bt.randInRange (20, 45)
+const rc = bt.randInRange (60, 75)
+
+const starty = ra 
+const bwidth = rr*(1.5)
+drawLines([
+  [[rc, starty], [rc+bwidth, starty]],
+  [[rc, rb+starty], [rc, starty]],
+  [[rc, rb+starty], [rc+bwidth, rb+starty]],
+  [[rc+bwidth, rb+starty], [rc+bwidth, starty]],
+])
+
+drawLines([
+  [[rc+(bwidth/4), starty], [rc+(bwidth/4), starty+(rb/2)]],
+  [[rc+(3*(bwidth/4)), starty+(rb/2)], [rc+(bwidth/4), starty+(rb/2)]],
+  [[rc+(3*(bwidth/4)), starty+(rb/2)], [rc+(3*bwidth/4), starty]]
+])
+
+drawLines([
+  [[rc, starty+rb], [rc+(bwidth/2), starty+rb+(rb/4)]],
+  [[rc+bwidth, starty+rb], [rc+(bwidth/2), starty+rb+(rb/4)]]
+])
+  
 const door = [
   [80, 53],
   [63,53],
@@ -78,11 +123,12 @@ const handle = [
   [66, 36]
 ];
 
+
+
 finalLines.push(polyline);
 finalLines.push(door);
 finalLines.push(window);
 finalLines.push(handle);
-
 drawLines(finalLines)
 
 const ts = new bt.Turtle()
